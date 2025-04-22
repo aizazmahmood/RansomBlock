@@ -1,6 +1,6 @@
 'use strict';
 
-const { Contract } = require('fabric-shim');
+const { Contract } = require('fabric-contract-api');
 
 class FileContract extends Contract {
 
@@ -43,7 +43,6 @@ class FileContract extends Contract {
     }
     return data.toString();
   }
-
 }
 
 module.exports = FileContract;
