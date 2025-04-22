@@ -5,7 +5,7 @@ const { Contract } = require('fabric-shim');
 class FileContract extends Contract {
 
   async initLedger(ctx) {
-    console.info('⛓️ FileContract ledger initialized');
+    console.info('FileContract ledger initialized');
   }
 
   async storeFileHash(ctx, fileID, hashValue) {
@@ -20,7 +20,7 @@ class FileContract extends Contract {
     };
 
     await ctx.stub.putState(fileID, Buffer.from(JSON.stringify(fileRecord)));
-    console.info(`✅ Stored hash for file ${fileID}`);
+    console.info(`Stored hash for file ${fileID}`);
     return JSON.stringify(fileRecord);
   }
 
